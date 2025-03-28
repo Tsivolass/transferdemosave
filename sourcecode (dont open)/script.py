@@ -17,7 +17,7 @@ def changeversion(path):
                     print(f'Opened {file_name}')
                 
                 # Update GameVersion
-                data["GameVersion"] = "0.3.3f11"
+                data["GameVersion"] = version
 
                 # Save the modified data back
                 with open(file_path, 'w') as file:
@@ -37,7 +37,11 @@ newtemp = os.path.join(os.getenv('LOCALAPPDATA'), '..', 'LocalLow', 'TVGS', 'Sch
 for foldername in os.listdir(newtemp):
     newsaveloc = os.path.join(newtemp, foldername)
     newsavepath = os.path.join(newsaveloc, f'SaveGame_{nun}')
-
+    fisse_path = os.path.join(newsavepath, 'Money.json')
+    with open(fisse_path, 'r') as file:
+                    data = json.load(file)
+                    print(f'Opened ')
+    version = data['GameVersion']
     if os.path.exists(newsavepath):
         print(f'SaveGame_{nun} already exists. Exiting.')
         exit()
