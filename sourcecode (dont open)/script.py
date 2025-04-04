@@ -83,7 +83,7 @@ print(f'Copied {postpath} to {targetfolder}')
 oldsavespath = os.path.join(os.getenv('LOCALAPPDATA'), '..', 'LocalLow', 'TVGS', 'Schedule I Free Sample', 'Saves', f'SaveGame_{num}')
 
 
-version = '0.3.3f14'
+version = '0.3.3f15'
 
 movedirec = os.path.join(base_directory)
 
@@ -92,5 +92,3 @@ print(f'Moved {oldsavespath} to {base_directory}')
 changeversion(movedirec, version)
 
 print("All files copied successfully!")
-
-
